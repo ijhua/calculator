@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    var number = "";
-    var newnumber = "";
-    var operator = "";
-    var totaldiv = $("#total");
-    var testNumLength = function (number) {
+	var testNumLength = function (number) {
         if (number.length > 9) {
             totaldiv.text(number.substr(number.length - 9, 9));
             if (number.length > 15) {
@@ -12,8 +8,13 @@ $(document).ready(function () {
             }
         }
     };
+	var number = "";
+    var newnumber = "";
+    var operator = "";
+    var totaldiv = $("#total");
+    var result;
     totaldiv.text("0");
-    $("#numbers a").not("#clear,#clearall").click(function () {
+    $("#numbers a").not("#clear", "#clearall").click(function () {
 		number += $(this).text();
 		totaldiv.text(number);
 		testNumLength(number);
@@ -33,16 +34,16 @@ $(document).ready(function () {
     });
     $("#equals").click(function () {
 		if (operator === "+") {
-			number = (parseInt(number, 10) + parseInt(newnumber, 10)).toString(10);
+			result = (parseInt(number, 10) + parseInt(newnumber, 10)).toString(10);
 		} else if (operator === "-") {
-			number = (parseInt(newnumber, 10) - parseInt(number, 10)).toString(10);
+			result = (parseInt(newnumber, 10) - parseInt(number, 10)).toString(10);
 		} else if (operator === "/") {
-			number = (parseInt(newnumber, 10) / parseInt(number, 10)).toString(10);
+			result = (parseInt(newnumber, 10) / parseInt(number, 10)).toString(10);
 		} else if (operator === "*") {
-			number = (parseInt(newnumber, 10) * parseInt(number, 10)).toString(10);
+			result = (parseInt(newnumber, 10) * parseInt(number, 10)).toString(10);
 		}
-		totaldiv.text(number);
-		testNumLength(number);
+		totaldiv.text(result);
+		testNumLength(result);
 		number = "";
 		newnumber = "";
     });
