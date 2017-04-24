@@ -49,7 +49,10 @@ $(document).ready(function () {
         newnumber = "";
     });
     
-    
+    $("#change").on("click",function(){
+       history.pushState(null, "", "/foo");
+        document.dispatchEvent(new Event("locationchange"));
+    });
 });
 
 function handlePageChange() {
