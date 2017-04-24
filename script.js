@@ -50,7 +50,7 @@ $(document).ready(function () {
     });
     
     $("#change").on("click",function(){
-       history.pushState(null, "", "/404");
+       history.pushState(null, "", "/calculator/404");
         document.dispatchEvent(new Event("locationchange"));
     });
 });
