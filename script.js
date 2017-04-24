@@ -1,27 +1,6 @@
 $(document).ready(function () {
     // set the initial page to calculator
-    history.pushState(null, "", "/calculator/calculator");
-
-    function handlePageChange() {
-      // get the current page from the url
-        var currentLocation = document.location.pathname.split("/")[1];
-      // only display that page
-        var pages = $("#pages").children();
-        var foundMatch = false;
-        for (var i=0;i<pages.length;i++) {
-            if (a.id != currentLocation) {
-                a.style.display = "none";
-                } else {
-                    a.style.display = "";
-                    foundMatch = true;
-                }
-        }
-        if (!foundMatch) {
-            $("#404").style("display","");
-        }
-    };
-    document.addEventListener("locationchange", handlePageChange);
-    
+    history.pushState(null, "", "/calculator");
     var number = "";
     var newnumber = "";
     var operator = "";
@@ -73,5 +52,25 @@ $(document).ready(function () {
     
 });
 
+function handlePageChange() {
+      // get the current page from the url
+        var currentLocation = document.location.pathname.split("/")[1];
+      // only display that page
+        var pages = $("#pages").children();
+        var foundMatch = false;
+        for (var i=0;i<pages.length;i++) {
+            if (a.id != currentLocation) {
+                a.style.display = "none";
+                } else {
+                    a.style.display = "";
+                    foundMatch = true;
+                }
+        }
+        if (!foundMatch) {
+            $("#404").style("display","");
+        }
+    };
+    document.addEventListener("locationchange", handlePageChange);
+    
 
 
