@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // set the initial page to calculator
-    history.pushState(null, "", "/calculator");
+    history.pushState(null, "", "/calculator/calculator");
 
     function handlePageChange() {
       // get the current page from the url
@@ -9,18 +9,19 @@ $(document).ready(function () {
         var pages = $("#pages").children();
         var foundMatch = false;
         for (var i=0;i<pages.length;i++) {
-        if (a.id != currentLocation) {
-          a.style.display = "none";
-        } else {
-          a.style.display = "";
-          foundMatch = true;
+            if (a.id != currentLocation) {
+                a.style.display = "none";
+                } else {
+                    a.style.display = "";
+                    foundMatch = true;
+                }
         }
-      }
-      if (!foundMatch) {
-        $("#404").style("display","");
-      }
+        if (!foundMatch) {
+            $("#404").style("display","");
+        }
     };
     document.addEventListener("locationchange", handlePageChange);
+    
     var number = "";
     var newnumber = "";
     var operator = "";
