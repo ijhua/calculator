@@ -62,6 +62,7 @@ function handlePageChange() {
         var pages = $("#pages").children();
         var foundMatch = false;
         for (var i=0;i<pages.length;i++) {
+            var a = pages[i];
             if (a.id != currentLocation) {
                 a.style.display = "none";
                 } else {
