@@ -49,38 +49,40 @@ $(document).ready(function () {
         newnumber = "";
     });
     
-    $("#to-about").on("click",function(){changePage("/calculator/about")});
-    $("#to-calc").on("click",function(){changePage("/calculator/calculator")});
-    $("#to-foo").on("click",function(){changePage("/calculator/foo")});
+<<<<<<< HEAD
+    $("#to-about").on("click",function(){changePage("/about")});
+    $("#to-calc").on("click",function(){changePage("/calculator")});
+    $("#to-foo").on("click",function(){changePage("/foo")});
     
     changePage("/calculator");
+=======
+    $("#change").on("click",function(){
+       history.pushState(null, "", "/404");
+        document.dispatchEvent(new Event("locationchange"));
+    });
+>>>>>>> parent of 583c30b... small fix to pages and url handling
 });
 
-function changePage(name) {
-  history.pushState(null, "", name);
-  document.dispatchEvent(new Event("locationchange"));
-}
-
 function handlePageChange() {
-  // get the current page from the url
-  var currentLocation = document.location.pathname.split("/")[1];
-  // only display that page
-  var pages = $("#pages").children();
-  var foundMatch = false;
-  for (var i=0;i<pages.length;i++) {
-    var a = pages[i];
-    if (a.id != currentLocation) {
-      a.style.display = "none";
-    } else {
-      a.style.display = "";
-      foundMatch = true;
-    }
-  }
-  if (!foundMatch) {
-    $("#404").css("display","");
-  }
-}
-document.addEventListener("locationchange", handlePageChange);
+      // get the current page from the url
+        var currentLocation = document.location.pathname.split("/")[1];
+      // only display that page
+        var pages = $("#pages").children();
+        var foundMatch = false;
+        for (var i=0;i<pages.length;i++) {
+            var a = pages[i];
+            if (a.id != currentLocation) {
+                a.style.display = "none";
+                } else {
+                    a.style.display = "";
+                    foundMatch = true;
+                }
+        }
+        if (!foundMatch) {
+            $("#404").style("display","");
+        }
+    };
+    document.addEventListener("locationchange", handlePageChange);
     
 
 
