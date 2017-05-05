@@ -53,7 +53,7 @@ $(document).ready(function () {
     $("#to-calc").on("click",function(){changePage("/calculator/calculator")});
     $("#to-foo").on("click",function(){changePage("/calculator/foo")});
     
-    changePage("/calculator/");
+    changePage("/calculator");
 });
 
 function changePage(name) {
