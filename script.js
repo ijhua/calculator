@@ -49,9 +49,9 @@ $(document).ready(function () {
         newnumber = "";
     });
     
-    $("#to-about").on("click",function(){changePage("/about")});
-    $("#to-calc").on("click",function(){changePage("/calculator")});
-    $("#to-foo").on("click",function(){changePage("/foo")});
+    $("#to-about").on("click",function(){changePage("/calculator/about")});
+    $("#to-calc").on("click",function(){changePage("/calculator/calculator")});
+    $("#to-foo").on("click",function(){changePage("/calculator/foo")});
     
     changePage("/calculator");
 });
