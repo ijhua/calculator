@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // set the initial page to calculator
-    history.pushState(null, "", "/calculator/");
+    history.pushState(null, "", "/calculator");
     var number = "";
     var newnumber = "";
     var operator = "";
@@ -49,43 +49,35 @@ $(document).ready(function () {
         newnumber = "";
     });
     
-<<<<<<< HEAD
     $("#to-about").on("click",function(){changePage("/about")});
     $("#to-calc").on("click",function(){changePage("/calculator")});
     $("#to-foo").on("click",function(){changePage("/foo")});
     
     changePage("/calculator");
-<<<<<<< HEAD
-=======
-    $("#change").on("click",function(){
-       history.pushState(null, "", "/404");
-        document.dispatchEvent(new Event("locationchange"));
-    });
->>>>>>> parent of 583c30b... small fix to pages and url handling
-=======
->>>>>>> 629433284fb93e77bb9af351a7e1e4d710e07797
 });
 
+function changePage(name) {
+  history.pushState(null, "", name);
+  document.dispatchEvent(new Event("locationchange"));
+}
+
 function handlePageChange() {
-      // get the current page from the url
-        var currentLocation = document.location.pathname.split("/")[1];
-      // only display that page
-        var pages = $("#pages").children();
-        var foundMatch = false;
-        for (var i=0;i<pages.length;i++) {
-            var a = pages[i];
-            if (a.id != currentLocation) {
-                a.style.display = "none";
-                } else {
-                    a.style.display = "";
-                    foundMatch = true;
-                }
-        }
-        if (!foundMatch) {
-            $("#404").style("display","");
-        }
-    };
-    document.addEventListener("locationchange", handlePageChange);
-    
-
-
+  // get the current page from the url
+  var currentLocation = document.location.pathname.split("/")[1];
+  // only display that page
+  var pages = $("#pages").children();
+  var foundMatch = false;
+  for (var i=0;i<pages.length;i++) {
+    var a = pages[i];
+    if (a.id != currentLocation) {
+      a.style.display = "none";
+    } else {
+      a.style.display = "";
+      foundMatch = true;
+    }
+  }
+  if (!foundMatch) {
+    $("#404").css("display","");
+  }
+}
+document.addEventListener("locationchange", handlePageChange);
