@@ -55,12 +55,15 @@ $(document).ready(function () {
     $("#to-foo").on("click",function(){changePage("/foo")});
     
     changePage("/calculator");
+<<<<<<< HEAD
 =======
     $("#change").on("click",function(){
        history.pushState(null, "", "/404");
         document.dispatchEvent(new Event("locationchange"));
     });
 >>>>>>> parent of 583c30b... small fix to pages and url handling
+=======
+>>>>>>> 629433284fb93e77bb9af351a7e1e4d710e07797
 });
 
 function handlePageChange() {
