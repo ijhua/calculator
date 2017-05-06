@@ -64,8 +64,6 @@ $(document).ready(function () {
     
     changePage("/calculator");
 
-    // analytics button click
-
 });
 
 function changePage(name) {
