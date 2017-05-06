@@ -49,11 +49,17 @@ $(document).ready(function () {
         newnumber = "";
     });
     
-    $("#to-about").on("click",function(){changePage("/about")});
+    $("#to-about").on("click",function(){
+      changePage("/about");
+      ga('send','event','click','about')
+    });
     $("#to-calc").on("click",function(){changePage("/calculator")});
     $("#to-foo").on("click",function(){changePage("/foo")});
     
     changePage("/calculator");
+
+    // analytics button click
+
 });
 
 function changePage(name) {
