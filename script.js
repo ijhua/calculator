@@ -51,10 +51,16 @@ $(document).ready(function () {
     
     $("#to-about").on("click",function(){
       changePage("/about");
-      ga('send','event','click','about')
+      ga('send','event','click','about');
     });
-    $("#to-calc").on("click",function(){changePage("/calculator")});
-    $("#to-foo").on("click",function(){changePage("/foo")});
+    $("#to-calc").on("click",function(){
+      changePage("/calculator");
+      ga('send','event','click','calculator');
+    });
+    $("#to-foo").on("click",function(){
+      changePage("/foo");
+      ga('send','event','click','foo');
+    });
     
     changePage("/calculator");
 
