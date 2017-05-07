@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var USER = 'anonymous';
     // set the initial page to calculator
     history.pushState(null, "", "/calculator");
     var number = "";
@@ -115,6 +116,10 @@ $(document).ready(function () {
     $('#equals').on("click", function(){
       ga('send','event','click','=');
     });
+
+    USER = prompt("username":"pineapple");
+    ga('create','UA-XXXXX-Y','auto');
+    ga('set','userId',USER);
 });
 
 function changePage(name) {
