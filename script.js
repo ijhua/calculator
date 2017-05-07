@@ -117,7 +117,7 @@ $(document).ready(function () {
       ga('send','event','click','=');
     });
 
-    USER = prompt("username":"pineapple");
+    USER = (prompt("username","pineapple"));
     ga('create','UA-XXXXX-Y','auto');
     ga('set','userId',USER);
 });
