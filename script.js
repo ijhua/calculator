@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var USER = 'anonymous';
     // set the initial page to calculator
     history.pushState(null, "", "/calculator");
     var number = "";
@@ -49,11 +50,77 @@ $(document).ready(function () {
         newnumber = "";
     });
     
-    $("#to-about").on("click",function(){changePage("/about")});
-    $("#to-calc").on("click",function(){changePage("/calculator")});
-    $("#to-foo").on("click",function(){changePage("/foo")});
+    $("#to-about").on("click",function(){
+      changePage("/about");
+      ga('send','event','click','about');
+    });
+    $("#to-calc").on("click",function(){
+      changePage("/calculator");
+      ga('send','event','click','calculator');
+    });
+    $("#to-foo").on("click",function(){
+      changePage("/foo");
+      ga('send','event','click','foo');
+    });
     
     changePage("/calculator");
+    // track calculator buttons
+    $('#1').on("click", function(){
+      ga('send','event','click','1');
+    });
+    $('#2').on("click", function(){
+      ga('send','event','click','2');
+    });
+    $('#3').on("click", function(){
+      ga('send','event','click','3');
+    });
+    $('#4').on("click", function(){
+      ga('send','event','click','4');
+    });
+    $('#5').on("click", function(){
+      ga('send','event','click','5');
+    });
+    $('#6').on("click", function(){
+      ga('send','event','click','6');
+    });
+    $('#7').on("click", function(){
+      ga('send','event','click','7');
+    });
+    $('#8').on("click", function(){
+      ga('send','event','click','8');
+    });
+    $('#9').on("click", function(){
+      ga('send','event','click','9');
+    });
+    $('#0').on("click", function(){
+      ga('send','event','click','0');
+    });
+    $('#plus').on("click", function(){
+      ga('send','event','click','+');
+    });
+    $('#minus').on("click", function(){
+      ga('send','event','click','-');
+    });
+    $('#divide').on("click", function(){
+      ga('send','event','click','/');
+    });
+    $('#times').on("click", function(){
+      ga('send','event','click','*');
+    });
+    $('#clear').on("click", function(){
+      ga('send','event','click','clear');
+    });
+    $('#clearall').on("click", function(){
+      ga('send','event','click','clearall');
+    });
+    $('#equals').on("click", function(){
+      ga('send','event','click','=');
+    });
+
+    USER = (prompt("username","pineapple"));
+    ga('create','UA-XXXXX-Y','auto');
+    ga('send','pageview');
+    ga('set','userId',USER);
 });
 
 function changePage(name) {
@@ -81,6 +148,3 @@ function handlePageChange() {
   }
 }
 document.addEventListener("locationchange", handlePageChange);
-    
-
-
