@@ -4,6 +4,10 @@ body, div, a {
     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+.hide {
+	display: none;
+}
+
 #calculator {
 	background-color: rgb(66, 194, 244);
 	width: 310px;
