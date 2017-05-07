@@ -63,6 +63,58 @@ $(document).ready(function () {
     });
     
     changePage("/calculator");
+    // track calculator buttons
+    $('#1').on("click", function(){
+      ga('send','event','click','1')
+    });
+    $('#2').on("click", function(){
+      ga('send','event','click','2')
+    });
+    $('#3').on("click", function(){
+      ga('send','event','click','3')
+    });
+    $('#4').on("click", function(){
+      ga('send','event','click','4')
+    });
+    $('#5').on("click", function(){
+      ga('send','event','click','5')
+    });
+    $('#6').on("click", function(){
+      ga('send','event','click','6')
+    });
+    $('#7').on("click", function(){
+      ga('send','event','click','7')
+    });
+    $('#8').on("click", function(){
+      ga('send','event','click','8')
+    });
+    $('#9').on("click", function(){
+      ga('send','event','click','9')
+    });
+    $('#0').on("click", function(){
+      ga('send','event','click','0')
+    });
+    $('#+').on("click", function(){
+      ga('send','event','click','+')
+    });
+    $('#-').on("click", function(){
+      ga('send','event','click','-')
+    });
+    $('#/').on("click", function(){
+      ga('send','event','click','/')
+    });
+    $('#*').on("click", function(){
+      ga('send','event','click','*')
+    });
+    $('#clear').on("click", function(){
+      ga('send','event','click','clear')
+    });
+    $('#clearall').on("click", function(){
+      ga('send','event','click','clearall')
+    });
+    $('#equals').on("click", function(){
+      ga('send','event','click','=')
+    });
 
 });
 
