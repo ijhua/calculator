@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Calculator</title>
-		<link rel="stylesheet" href="style.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="script.js"></script>
-	</head>
-	<body>
-		<nav>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav>
         <button id="to-about">About</button>
         <button id="to-calc">Calculator</button>
         <button id="to-foo">Foo</button>
-	    </nav>
-        <div id = "pages">
-        
-            <div id="calculator">
-                <div id="total"></div>
-                <div id="operators">
-                    <a id = 'plus'>+</a>
-                    <a id = 'minus'>-</a>
-                    <a id = 'divide'>/</a>
-                    <a id = 'times'>*</a>
-                    <a id="equals">=</a>
-                </div>
-                <div id="numbers">
-                    <a id = '1'>1</a>
-                    <a id = '2'>2</a>
-                    <a id = '3'>3</a>
-                    <a id = '4'>4</a>
-                    <a id = '5'>5</a>
-                    <a id = '6'>6</a>
-                    <a id = '7'>7</a>
-                    <a id = '8'>8</a>
-                    <a id = '9'>9</a>
-                    <a id="clear">C</a>
-                    <a id = '0'>0</a>
-                    <a id="clearall">AC</a>
-                </div>
-		      </div>
-            <div id ="about"> This is a calculator.</div>
-            <div id = "404">Sorry, that page doesn't exist.</div>
+    </nav>
+    <div id="pages">
+        <div id="calculator" class="hide">
+            <div id="total"></div>
+            <div id="operators">
+                <a id='plus'>+</a>
+                <a id='minus'>-</a>
+                <a id='divide'>/</a>
+                <a id='times'>*</a>
+                <a id="equals">=</a>
+            </div>
+            <div id="numbers">
+                <a id='1'>1</a>
+                <a id='2'>2</a>
+                <a id='3'>3</a>
+                <a id='4'>4</a>
+                <a id='5'>5</a>
+                <a id='6'>6</a>
+                <a id='7'>7</a>
+                <a id='8'>8</a>
+                <a id='9'>9</a>
+                <a id="clear">C</a>
+                <a id='0'>0</a>
+                <a id="clearall">AC</a>
+            </div>
         </div>
-		<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		
-		ga('create', 'UA-96755831-2', 'auto');
-		ga('set','calculator','/calculator');
-		ga('set','about','/about');
-		ga('set','foo','/foo');
-		ga('set','404','/404');
-		ga('send', 'pageview');
-		</script>
-	</body>
+        <div id="about" class="hide"> This is a calculator.</div>
+        <div id="404" class="hide">Sorry, that page doesn't exist.</div>
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-96755831-2', 'auto');
+        ga('set', 'calculator', '/calculator');
+        ga('set', 'about', '/about');
+        ga('set', 'foo', '/foo');
+        ga('set', '404', '/404');
+        ga('send', 'pageview');
+    </script>
+</body>
+
 </html>
