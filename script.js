@@ -65,57 +65,56 @@ $(document).ready(function () {
     changePage("/calculator");
     // track calculator buttons
     $('#1').on("click", function(){
-      ga('send','event','click','1')
+      ga('send','event','click','1');
     });
     $('#2').on("click", function(){
-      ga('send','event','click','2')
+      ga('send','event','click','2');
     });
     $('#3').on("click", function(){
-      ga('send','event','click','3')
+      ga('send','event','click','3');
     });
     $('#4').on("click", function(){
-      ga('send','event','click','4')
+      ga('send','event','click','4');
     });
     $('#5').on("click", function(){
-      ga('send','event','click','5')
+      ga('send','event','click','5');
     });
     $('#6').on("click", function(){
-      ga('send','event','click','6')
+      ga('send','event','click','6');
     });
     $('#7').on("click", function(){
-      ga('send','event','click','7')
+      ga('send','event','click','7');
     });
     $('#8').on("click", function(){
-      ga('send','event','click','8')
+      ga('send','event','click','8');
     });
     $('#9').on("click", function(){
-      ga('send','event','click','9')
+      ga('send','event','click','9');
     });
     $('#0').on("click", function(){
-      ga('send','event','click','0')
+      ga('send','event','click','0');
     });
-    $('#+').on("click", function(){
-      ga('send','event','click','+')
+    $('#plus').on("click", function(){
+      ga('send','event','click','+');
     });
-    $('#-').on("click", function(){
-      ga('send','event','click','-')
+    $('#minus').on("click", function(){
+      ga('send','event','click','-');
     });
-    $('#/').on("click", function(){
-      ga('send','event','click','/')
+    $('#divide').on("click", function(){
+      ga('send','event','click','/');
     });
-    $('#*').on("click", function(){
-      ga('send','event','click','*')
+    $('#times').on("click", function(){
+      ga('send','event','click','*');
     });
     $('#clear').on("click", function(){
-      ga('send','event','click','clear')
+      ga('send','event','click','clear');
     });
     $('#clearall').on("click", function(){
-      ga('send','event','click','clearall')
+      ga('send','event','click','clearall');
     });
     $('#equals').on("click", function(){
-      ga('send','event','click','=')
+      ga('send','event','click','=');
     });
-
 });
 
 function changePage(name) {
