@@ -119,6 +119,7 @@ $(document).ready(function () {
 
     USER = (prompt("username","pineapple"));
     ga('create','UA-XXXXX-Y','auto');
+    ga('send','pageview');
     ga('set','userId',USER);
 });
 
