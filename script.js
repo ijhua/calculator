@@ -49,6 +49,7 @@ $(document).ready(function () {
   ga('create', 'UA-XXXXX-Y', 'auto');
   ga('send', 'pageview');
   ga('set', 'userId', USER);
+  ga('set','dimension1',USER)
 });
 
 function setupCalculator() {
